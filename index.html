@@ -7,53 +7,135 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <header class="header">
+        <div class="header-content">
+            <h1><span class="typing-effect" id="typing-name">Tanishk Kaushik</span></h1>
+            <p><span class="typing-effect" id="typing-title">Computer Science Student |
+                <p>CyberSecurity and Software Development</span></p>
+            </p>
+        </div>
+        <nav class="nav-bar">
+            <button onclick="showSection('summary')">Summary</button>
+            <button onclick="showSection('skills')">Skills</button>
+            <button onclick="showSection('projects')">Projects</button>
+            <button onclick="showSection('experience')">Experience</button>
+            <button onclick="showSection('certification')">Certification</button>
+            <button onclick="showSection('contact')">Contact</button>
         </nav>
     </header>
+    
 
-    <section id="about">
-        <div class="container">
-            <h1>About Me</h1>
-            <!-- Your about me content goes here -->
-        </div>
-    </section>
+    <main>
 
-    <section id="education">
-        <div class="container">
-            <h1>Education</h1>
-            <!-- Your education details go here -->
-        </div>
-    </section>
+        <section id="summary" class="section visible">
+            <div class="profile-container">
+                <img src="photo.jpg" alt="Tanishk Kaushik" class="profile-photo">
+                <button onclick="showSummary()" class="about-me-button">About Me</button>
+            </div>
+            <div class="summary-content hidden">
+                <h2>About Me</h2>
+                <p>Hello,
+                    My name is Tanishk Kaushik and I have been pursuing my Bachelor's degree in Computer Science with specialization in Cybersecurity at Bharath University. Academic journey has kindled the passion of braving through the digital arena, especially its complexities, in cybersecurity.
+                    
+                    I possess technical skills in programming languages such as Python and have a foundational understanding of Java. I am currently focused on mastering Data Structures and Algorithms in Java, They're more of a fundamental building block of any great software development career. The best addition that I have to my education so far comes in the forms of hands-on experience from internships into both frontend and full-stack development, where I used to apply technologies including HTML,CSS, JavaScript & (MERN) on my projects.
+                    
+                    Among the most satisfying projects was 'Secure Text,': cybersecurity through cryptographic techniques to enhance privacy in communication. This project was both enriching for my understanding of the basic principles of cybersecurity and ignited my passion to secure digital environments against emerging threats.
+                    
+                    In addition to my technical pursuits,
+                    I have developed discipline and leadership abilities by achieving "B" Certificate in the National Cadet Corps with an Alpha grade. This experience has reinforced my commitment to teamwork, responsibility, and service, principles that I integrate into all aspects of my work.
+                    
+                    Alongside my academic and practical experiences, I am presently involved as a tech blogger, where I share valuable insights and tutorials on cybersecurity, software development, and emerging technologies under the alias"Tanishk's Insight Corner."
+                    
+                    In addition, I like the stock market, observing trends, and choosing investment opportunities. Such an analytical nature of mine enhances my knowledge of the economic landscape and complements my technical background since critical thought and sophisticated data comprehension apply equally in both disciplines.
+                    
+                                  Let’s connect!</p>
+            </div>
+        </section>
 
-    <section id="skills">
-        <div class="container">
-            <h1>Skills</h1>
-            <!-- Your skills details go here -->
-        </div>
-    </section>
+        <section id="skills" class="section hidden animated slideInLeft">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">Python</div>
+                <div class="skill-card">Java (DSA)</div>
+                <div class="skill-card">Full Stack Development (MERN)</div>
+                <div class="skill-card">SQL & Database Management</div>
+                <div class="skill-card">Linux Operations</div>
+                <div class="skill-card">Cybersecurity Principles</div>
+            </div>
+        </section>
 
-    <section id="projects">
-        <div class="container">
-            <h1>Projects</h1>
-            <!-- Your project details go here -->
-        </div>
-    </section>
+        <section id="projects" class="section hidden animated fadeInUp">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Real-Time Chat Application</strong> - Built using React, Node.js, MongoDB.</li>
+                <li><strong>E-Commerce Website</strong> - Full-stack with React and Node.js.</li>
+                <li><strong>Crypto Tracker</strong> - Cryptocurrency tracking app with React.</li>
+                <li><strong>Landing Page</strong> - Built using HTML, CSS, Javascript.</li>
+                <li><strong>Blog Website</strong> - Develop using web technologies, Node.js, MongoDB.</li>
+                <li><strong>Registration Form</strong> - Built using web technologies, Node.js, MongoDB.</li>
+                <li><strong>SecureText</strong> - A secure text app using cryptographic algorithms.</li>
+            </ul>
+        </section>
 
-    <section id="contact">
-        <div class="container">
-            <h1>Contact Me</h1>
-            <!-- Your contact details go here -->
-        </div>
-    </section>
+        <section id="experience" class="section hidden animated slideInRight">
+            <h2>Experience</h2>
+            <ul>
+                <li><strong>React Developer Intern</strong> - Slash Mark IT Startup, Jun 2024 - Oct 2024</li>
+                <li><strong>Web Developer Intern</strong> - OctaNet Services, May 2024 - Aug 2024</li>
+                <li><strong>Python Development Intern</strong> - TechnoHacks EduTech Official, May 2024</li>
+                <li><strong>Cyber Security Intern</strong> - Prodigy InfoTech, May 2024</li>
+                <li><strong>Full-Stack Development Intern</strong> - Bharat Intern, Apr 2024 - May 2024</li>
+                <li><strong>Java Programming Intern</strong> - CodSoft, Apr 2024</li>
+                <li><strong>Software Development Intern</strong> - Cognifyz Technologies, Mar 2024 - Apr 2024</li>
+                <li><strong>Java Development Intern</strong> - CodersCave, Mar 2024 - Apr 2024</li>
+                <li><strong>Industrial Training</strong> - Magic Bus India Foundation, Feb 2024 - Apr 2024</li>
+                <li><strong>CyberSecurity & Ethical-Hacking Intern</strong> - Innovate Group, Jan 2024 - Apr 2024</li>
+            </ul>
+        </section>
+
+        <section id="certification" class="section hidden animated slideInLeft">
+            <h2>Certificate</h2>
+            <div class="certification-grid">
+                <ul>
+                    <li><strong>Azure: Create a REST API using NodeJs</strong> - Coursera</li>
+                    <li><strong>Build 20 Javascript Projects In 20 Days</strong> - Udemy</li>
+                    <li><strong>Build a Website with WordPress</strong> - Coursera</li>
+                    <li><strong>Ethical-Hacking</strong> - GUVI Geeks Networks - IITM</li>
+                    <li><strong>Mastering MongoDB, PL/SQL & Oracle SQL</strong> - GUVI Geeks Networks - IITM</li>
+                    <li><strong>MERN Stack with Practical Project</strong> - Udemy</li>
+                    <li><strong>SQL & Relational Databases 101</strong> - Cognitive Class By IBM</li>
+                    <li><strong>Introduction to CyberSecurity</strong> - Infosys SpringBoard & Cisco Networking Academy</li>
+                    <li><strong>Enterprise Design Thinking Practitioner</strong> - Cognitive Class By IBM</li>
+                </ul>
+            </section>        
+
+        <section id="contact" class="section hidden animated fadeIn">
+            <h2>Contact Me</h2>
+            <form class="contact-form" action="https://formspree.io/f/mnnqpbeq" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="https://drive.google.com/file/d/10h2c9qzTjXsAVescPtGo_vaajvlw1uqo/view?usp=drivesdk" target="_blank">Resume</a> |
+                <a href="https://github.com/CodeVoyageTanishk" target="_blank">GitHub</a> |
+                <a href="https://www.linkedin.com/in/tanishk-kaushik-631156268/" target="_blank">LinkedIn</a> |
+                <a href="https://tanishkkaushikblogs.blogspot.com/" target="_blank">Blogger</a> 
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Tanishk Kaushik. All Rights Reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
-</html>
+</html
