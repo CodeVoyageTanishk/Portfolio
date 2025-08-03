@@ -1,38 +1,33 @@
-/* ==================== Global Styles ==================== */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #f4f9fc;
-    color: #222;
+    background-color: #e9f5fa;
+    color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
     width: 100%;
-    max-width: 1300px;
-    line-height: 1.7;
-    transition: background-color 0.3s ease;
+    max-width: 1200px;
 }
 
-/* ==================== Header Styling ==================== */
+/* Header Styling */
 .header {
     width: 100%;
-    background: linear-gradient(135deg, #0052cc, #8e44ad);
+    background: linear-gradient(135deg, #0066cc, #8e44ad); /* Old color */
     color: #fff;
     text-align: center;
-    padding: 2.5em 0 2em 0;
+    padding: 1.5em 0;
     position: static;
     top: 0;
     z-index: 10;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-    border-bottom: 4px solid #fff;
-    letter-spacing: 1px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .typing-effect {
@@ -42,111 +37,78 @@ body {
     display: inline-block;
     border-right: 3px solid #fff;
     animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
-    font-weight: bold;
-    font-size: 1.2rem;
-    max-width: 90vw;
 }
 
+/* Typing animation */
 @keyframes typing {
     from { width: 0; }
     to { width: 100%; }
 }
 
+/* Caret blink animation */
 @keyframes blink-caret {
     from, to { border-color: transparent; }
     50% { border-color: #fff; }
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .header-content h1,
     .header-content p {
-        white-space: normal;
-        overflow: hidden;
-        width: 100%;
+        white-space: normal; /* Allow wrapping */
+        overflow: hidden;    /* Hide overflow */
+        width: 100%;        /* Ensure full width */
     }
 }
 
-/* ==================== Navigation Bar ==================== */
-.nav-bar {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 1em 0;
-    gap: 10px;
-    background-color: #ffffff;
-    border-bottom: 2px solid #e0e0e0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
 .nav-bar button {
-    padding: 12px 24px;
+    padding: 12px 20px;
+    margin: 5px;
     border: none;
-    border-radius: 8px;
-    background-color: #2c3e50;
+    border-radius: 5px;
+    background-color: #2980b9;
     color: #fff;
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1em;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .nav-bar button:hover {
-    background-color: #34495e;
+    background-color: #3498db;
     transform: scale(1.1);
 }
 
-/* ==================== Sections ==================== */
+/* Section Styling */
 .section {
-    width: 95%;
-    max-width: 1100px;
-    padding: 2.5em;
-    margin: 2em auto;
-    background: linear-gradient(to bottom right, #ffffff, #e7f1ff);
-    border-radius: 14px;
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s ease;
-    position: relative;
-}
-
-.section::before {
-    content: "";
-    position: absolute;
-    top: -8px;
-    left: -8px;
-    right: -8px;
-    bottom: -8px;
-    border-radius: 20px;
-    background: linear-gradient(135deg, rgba(0, 102, 255, 0.15), rgba(255, 255, 255, 0.3));
-    z-index: -1;
-    filter: blur(8px);
+    width: 90%;
+    max-width: 1000px;
+    padding: 2em;
+    margin: 2em 0;
+    background-color: #f7faff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .hidden {
     display: none;
 }
 
-/* ==================== Profile Section ==================== */
 .profile-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 30px;
-    text-align: center;
+    margin-bottom: 20px;
 }
-
 .profile-card {
     position: relative;
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     margin: auto;
-    perspective: 1000px;
+    perspective: 1000px; /* Adds 3D perspective for the flip effect */
 }
 
 .profile-card.flipped .profile-front {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); /* Rotates the profile image on flip */
 }
 
 .profile-face {
@@ -161,9 +123,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #fff;
+    background: white;
     border-radius: 50%;
-    box-shadow: 0 0 25px rgba(0, 102, 204, 0.5), 0 0 50px rgba(0, 102, 204, 0.3);
+    box-shadow: 0 0 20px rgba(0, 102, 204, 0.6), 0 0 40px rgba(0, 102, 204, 0.4);
     transition: transform 0.6s;
 }
 
@@ -171,135 +133,126 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 5px solid #ffffff;
-/*     box-shadow: 0 0 25px rgba(0, 102, 204, 0.7), 0 0 60px rgba(0, 102, 204, 0.5);
-    animation: glowing 2s infinite alternate; */
-    object-fit: cover;
+    border: 5px solid transparent;
+/*     box-shadow: 0 0 20px rgba(0, 102, 204, 0.8), 0 0 40px rgba(0, 102, 204, 0.6), 0 0 60px rgba(0, 102, 204, 0.4); /* LED glow */
+/*     animation: glowing 3s infinite alternate; /* Glowing LED animation */ */ */
 }
 
 /* @keyframes glowing {
     0% {
-        box-shadow: 0 0 20px rgba(0, 102, 204, 0.6), 0 0 40px rgba(0, 102, 204, 0.4);
+        box-shadow: 0 0 20px rgba(46, 141, 236, 0.8), 0 0 40px rgba(0, 102, 204, 0.6), 0 0 60px rgba(0, 102, 204, 0.4);
     }
     100% {
-        box-shadow: 0 0 35px rgba(0, 102, 204, 1), 0 0 70px rgba(0, 102, 204, 0.8);
+        box-shadow: 0 0 30px rgba(0, 102, 204, 1), 0 0 60px rgba(0, 102, 204, 0.8), 0 0 90px rgba(0, 102, 204, 0.6);
     }
 } */
 
-/* ==================== About Me Section ==================== */
+/* Button Styling */
+.about-me-button {
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.about-me-button:hover {
+    background-color: #3498db;
+}
+
+/* About Me Styling */
 .about-me-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 1em;
-    padding: 1em;
+}
+.profile-photo {
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #2980b9; /* Optional: Add border */
+    margin-bottom: 10px;
 }
 
 .about-me-button {
-    padding: 12px 28px;
+    padding: 10px 20px;
     background-color: #2980b9;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    font-size: 1rem;
-    font-weight: 500;
+    transition: background-color 0.3s ease;
 }
 
 .about-me-button:hover {
     background-color: #3498db;
-    transform: scale(1.05);
 }
 
 .summary-content {
     padding: 2em;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 850px;
-    margin: auto;
-    text-align: justify;
-    line-height: 1.8;
-    font-size: 1rem;
+    background-color: #f7faff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* ==================== Skills Section ==================== */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 14px;
+    gap: 10px;
     justify-items: center;
-    margin-top: 1em;
 }
 
 .skill-card {
-    padding: 18px;
+    padding: 20px;
     background-color: #3498db;
     color: white;
     border-radius: 10px;
-    transition: all 0.4s ease;
+    transition: all 0.4s;
     text-align: center;
-    font-weight: 600;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    letter-spacing: 0.5px;
 }
 
 .skill-card:hover {
-    background-color: #2c82c9;
-    transform: scale(1.08);
+    background-color: #2980b9;
+    transform: scale(1.1);
 }
 
-/* ==================== Contact Form ==================== */
-.contact-form input,
-.contact-form textarea {
+/* Contact Form Styling */
+.contact-form input, .contact-form textarea {
     width: 100%;
-    padding: 14px;
-    margin: 12px 0;
-    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
     border: 1px solid #ccc;
-    font-size: 1rem;
 }
 
 .contact-form button {
-    padding: 14px 28px;
-    background-color: #2c3e50;
+    padding: 10px;
+    background-color: #2980b9;
     color: white;
     border: none;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .contact-form button:hover {
-    background-color: #34495e;
+    background-color: #3498db;
 }
 
-/* ==================== Footer ==================== */
 .footer {
     text-align: center;
     padding: 1em;
     background-color: #333;
     color: white;
     width: 100%;
-    font-size: 0.9rem;
-    margin-top: auto;
-    letter-spacing: 0.5px;
-    border-top: 4px solid #fff;
 }
 
-/* ==================== Animation Base Class ==================== */
+/* Animation Class */
 .animated {
     transition: all 0.6s ease-in-out;
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.animated.fadeInUp {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /* Media Queries for Responsiveness */
@@ -373,6 +326,7 @@ body {
         font-size: 0.8em;
     }
 }
+
 
 
 
