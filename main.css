@@ -177,14 +177,14 @@ body {
     object-fit: cover;
 }
 
-@keyframes glowing {
+/* @keyframes glowing {
     0% {
         box-shadow: 0 0 20px rgba(0, 102, 204, 0.6), 0 0 40px rgba(0, 102, 204, 0.4);
     }
     100% {
         box-shadow: 0 0 35px rgba(0, 102, 204, 1), 0 0 70px rgba(0, 102, 204, 0.8);
     }
-}
+} */
 
 /* ==================== About Me Section ==================== */
 .about-me-content {
@@ -373,5 +373,6 @@ body {
         font-size: 0.8em;
     }
 }
+
 
 
