@@ -3,15 +3,24 @@ function showSummary() {
     const summaryContent = document.querySelector('.summary-content');
     summaryContent.classList.toggle('hidden');
 }
+
+// Typing animation cleanup
 document.addEventListener("DOMContentLoaded", () => {
     const nameElement = document.getElementById("typing-name");
     const titleElement = document.getElementById("typing-title");
 
-    // Add a delay to ensure animation plays only once, then make the text static
     setTimeout(() => {
         nameElement.style.borderRight = "none";
         titleElement.style.borderRight = "none";
     }, 3000); // 3 seconds duration for typing effect
+
+    // Add click event for flipping profile card
+    const profileCard = document.querySelector('.profile-card');
+    if (profileCard) {
+        profileCard.addEventListener('click', () => {
+            profileCard.classList.toggle('flipped');
+        });
+    }
 });
 
 // Function to show different sections
@@ -26,4 +35,6 @@ function showSection(sectionId) {
         activeSection.classList.remove('hidden');
     }
 }
+
+
 
