@@ -134,18 +134,18 @@ body {
     height: 100%;
     border-radius: 50%;
     border: 5px solid transparent;
-/*     box-shadow: 0 0 20px rgba(0, 102, 204, 0.8), 0 0 40px rgba(0, 102, 204, 0.6), 0 0 60px rgba(0, 102, 204, 0.4); /* LED glow */
-/*     animation: glowing 3s infinite alternate; /* Glowing LED animation */ */ */
+    box-shadow: 0 0 20px rgba(0, 102, 204, 0.8), 0 0 40px rgba(0, 102, 204, 0.6), 0 0 60px rgba(0, 102, 204, 0.4); /* LED glow */
+    animation: glowing 3s infinite alternate; /* Glowing LED animation */
 }
 
-/* @keyframes glowing {
+@keyframes glowing {
     0% {
         box-shadow: 0 0 20px rgba(46, 141, 236, 0.8), 0 0 40px rgba(0, 102, 204, 0.6), 0 0 60px rgba(0, 102, 204, 0.4);
     }
     100% {
         box-shadow: 0 0 30px rgba(0, 102, 204, 1), 0 0 60px rgba(0, 102, 204, 0.8), 0 0 90px rgba(0, 102, 204, 0.6);
     }
-} */
+}
 
 /* Button Styling */
 .about-me-button {
@@ -326,6 +326,7 @@ body {
         font-size: 0.8em;
     }
 }
+
 
 
 
